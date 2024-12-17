@@ -1,0 +1,90 @@
+/* Style untuk seluruh halaman */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9f7df; /* Warna latar belakang ramah lingkungan */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 75%;
+    margin:  auto;
+    padding: 50px;
+}
+
+header {
+    text-align: start;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 35px;
+    color: #2c6e33;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    background-color: #56ab2f;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+a:hover {
+    background-color: #3d8721;
+}
+
+/* Style untuk daftar habit */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.habit-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.habit-name {
+    font-weight: bold;
+}
+
+.habit-progress {
+    color: #4caf50;
+}
+
+.habit-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+.edit-btn {
+    background-color: #f39c12;
+    color: #fff;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}

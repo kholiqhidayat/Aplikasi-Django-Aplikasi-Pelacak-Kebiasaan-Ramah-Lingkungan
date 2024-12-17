@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Green Theme</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0f7df; /* Latar hijau lembut */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 128, 0, 0.2);
+            width: 350px;
+            text-align: center;
+            border: 2px solid #81c784; /* Warna hijau terang */
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #2e7d32; /* Hijau gelap */
+            font-size: 24px;
+        }
+
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .login-container input {
+            padding: 10px;
+            border: 1px solid #81c784;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .login-container input:focus {
+            border-color: #4caf50; /* Hijau lebih kuat */
+        }
+
+        .login-container button {
+            padding: 12px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #66bb6a;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-container button:hover {
+            background-color: #388e3c; /* Hijau lebih gelap */
+        }
+
+        .icon {
+            font-size: 40px;
+            color: #66bb6a;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #388e3c;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="icon">&#127793;</div> <!-- Ikon daun -->
+        <h2>Login</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+        </form>
+        <div class="footer">Jaga lingkungan kita dengan kebiasaan hijau!</div>
+    </div>
+</body>
+</html>

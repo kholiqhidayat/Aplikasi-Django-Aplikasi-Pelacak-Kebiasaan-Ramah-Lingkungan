@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Habit - Green Theme</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7df; /* Light green background */
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #ffffff; /* White background for form */
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 128, 0, 0.2);
+            overflow: hidden;
+            border: 2px solid #81c784; /* Light green border */
+        }
+        .header {
+            background: #66bb6a; /* Green header */
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 26px;
+            font-weight: bold;
+        }
+        .form-section {
+            padding: 25px;
+        }
+        .form-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .form-section input, .form-section select, .form-section textarea {
+            padding: 10px;
+            border: 1px solid #81c784;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+        .form-section input:focus, .form-section select:focus, .form-section textarea:focus {
+            border-color: #4caf50; /* Stronger green focus */
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #388e3c; /* Darker green on hover */
+        }
+        .image-container {
+            text-align: center;
+            padding: 20px;
+            background: #f1f8e9; /* Lighter green for image section */
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Add a New Habit
+        </div>
+        <div class="form-section">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Save Habit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
